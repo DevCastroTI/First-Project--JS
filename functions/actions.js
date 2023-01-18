@@ -1,31 +1,31 @@
 const onOff = document.getElementById('onOff');
 const brokenReset = document.getElementById('brokenReset')
-const lamp = document.getElementById('lampada')
+const lamp = document.getElementById('lamp')
 
 function isLampBroken () {
-    return lamp.src.indexOf('quebrada') > - 1
+    return lamp.src.indexOf('broken') > - 1
 }
 
 function lampOn(){
     if(!isLampBroken()){
-        lamp.src = './statesLamp/ligada.png';
+        lamp.src = './statesLamp/on.png';
     }
 }
 
 function lampOff(){
     if(!isLampBroken()){
-        lamp.src = './statesLamp/desligada.png';
+        lamp.src = './statesLamp/off.png';
         
     }
 }
 
 function lampBroken (){
-    lamp.src = './statesLamp/quebrada.png';
+    lamp.src = './statesLamp/broken.png';
 }
 
 function resetLamp (){
     if(isLampBroken()) {
-     return lamp.src = './statesLamp/desligada.png';
+     return lamp.src = './statesLamp/off.png';
 }    
 }
 
@@ -53,23 +53,6 @@ onOff.textContent = 'ON'}
 
  
 }
-
-
- 
-
-
-
-
-
-
-
-
-    
-
-   
-
-
-
 
 brokenReset.addEventListener("click",repairLamp)
 onOff.addEventListener("click", turnOnOff);
